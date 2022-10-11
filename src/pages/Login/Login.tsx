@@ -1,21 +1,16 @@
-import { Button, Form, Input, message } from 'antd';
+import { Button, Form, Input } from 'antd';
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import { login } from '../../store/store.functions';
+import { User } from '../../store/store.types';
 
 const Login: React.FC = () => {
-  const onFinish = async (values: any) => {
-    try {
-      const response = await fetch('https://reqres.in/api/login', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(values),
-      });
+  const navigate = useNavigate();
 
-      const data = await response.json();
-      if (data.error) {
-        message.error('Username or password is incorrect');
-      }
-    } catch (error) {
-      console.log('loginError', error);
+  const onFinish = async (values: User) => {
+    const data = await login(values);
+    if (data.success) {
+      navigate('/dashboard');
     }
   };
 
