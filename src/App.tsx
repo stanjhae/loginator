@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { RouterProvider } from 'react-router-dom';
-import router from './router';
 import { view } from '@risingstack/react-easy-state';
 import { isAppReady } from './store/store.functions';
 import { Spin } from 'antd';
+import RouteHandler from './router';
 
 const App = () => {
   const [appReady, setAppReady] = useState(false);
@@ -15,7 +14,8 @@ const App = () => {
   if (!appReady) {
     return <Spin size="large" />;
   }
-  return <RouterProvider router={router} />;
+
+  return <RouteHandler />;
 };
 
 export default view(App);

@@ -7,7 +7,7 @@ const ProtectedRoute: FC<{ children: ReactElement }> = ({ children }) => {
   const { isLoggedIn } = AuthState;
 
   if (!isLoggedIn) {
-    return <Navigate to={'/login'} />;
+    return <Navigate to={'/login'} replace />;
   }
 
   return children;

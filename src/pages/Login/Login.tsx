@@ -11,7 +11,7 @@ const Login: React.FC = () => {
   const onFinish = async (values: User) => {
     const data = await login(values);
     if (data.success) {
-      navigate('/dashboard');
+      navigate('/dashboard', { replace: true });
     }
   };
 
