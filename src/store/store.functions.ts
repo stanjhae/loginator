@@ -2,6 +2,13 @@ import { message } from 'antd';
 import { User } from './store.types';
 import AuthState from './store';
 
+const isAppReady = () => {
+  const token = localStorage.getItem('token') || '';
+  AuthState.token = token;
+  AuthState.isLoggedIn = !!token;
+  return true;
+};
+
 const login = async (values: User) => {
   try {
     const response = await fetch('https://reqres.in/api/login', {
@@ -24,4 +31,4 @@ const login = async (values: User) => {
   }
 };
 
-export { login };
+export { login, isAppReady };

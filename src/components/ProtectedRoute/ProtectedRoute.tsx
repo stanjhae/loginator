@@ -4,7 +4,9 @@ import { Navigate } from 'react-router-dom';
 import AuthState from '../../store/store';
 
 const ProtectedRoute: FC<{ children: ReactElement }> = ({ children }) => {
-  if (!AuthState.isLoggedIn) {
+  const { isLoggedIn } = AuthState;
+
+  if (!isLoggedIn) {
     return <Navigate to={'/login'} />;
   }
 
