@@ -26,7 +26,13 @@ const Login: React.FC = () => {
       <Form.Item
         label="Email"
         name="email"
-        rules={[{ required: true, message: 'Please input your email!' }]}
+        rules={[
+          {
+            required: true,
+            message: 'Please input your email!',
+            type: 'email',
+          },
+        ]}
       >
         <Input />
       </Form.Item>
@@ -34,7 +40,9 @@ const Login: React.FC = () => {
       <Form.Item
         label="Password"
         name="password"
-        rules={[{ required: true, message: 'Please input your password!' }]}
+        rules={[
+          { required: true, message: 'Password should be at least 6 characters.', min: 6 },
+        ]}
       >
         <Input.Password />
       </Form.Item>
