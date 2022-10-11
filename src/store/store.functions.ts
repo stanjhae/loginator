@@ -1,5 +1,6 @@
 import { message } from 'antd';
 import { User } from './store.types';
+import AuthState from './store';
 
 const login = async (values: User) => {
   try {
@@ -14,6 +15,8 @@ const login = async (values: User) => {
       message.error('Username or password is incorrect');
       return { success: false };
     }
+    AuthState.token = data.token;
+    localStorage.setItem('token', data.token);
     return { ...data, success: true };
   } catch (error) {
     console.log('loginError', error);

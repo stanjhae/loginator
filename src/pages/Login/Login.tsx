@@ -3,6 +3,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { login } from '../../store/store.functions';
 import { User } from '../../store/store.types';
+import { view } from '@risingstack/react-easy-state';
 
 const Login: React.FC = () => {
   const navigate = useNavigate();
@@ -47,4 +48,4 @@ const Login: React.FC = () => {
   );
 };
 
-export default Login;
+export default view(Login);
