@@ -4,14 +4,27 @@
   display: flex;
 }
 
+.justify-space-between {
+  justify-content: space-between;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.vertical-padding-10 {
+  padding: 10px 0;
+}
+
 p,
-h1 {
+h1,
+h2 {
   font-family: 'Neue Haas Grotesk Display Pro', serif;
+  margin: 0;
 }
 
 p {
   font-weight: 500;
   font-size: 18px;
   line-height: 23px;
-  margin: 0;
 }

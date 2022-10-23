@@ -1,0 +1,14 @@
+.about-container {
+  display: flex;
+  flex-direction: column;
+  padding: 80px 50px;
+}
+
+.standalone-text {
+  font-size: 34px;
+  font-weight: 400;
+  width: 600px;
+  line-height: 120%;
+  padding: 70px 0;
+  align-self: center;
+}

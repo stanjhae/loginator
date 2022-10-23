@@ -32,6 +32,10 @@ const Navbar: React.FC = () => {
     navigate('/');
   };
 
+  const goToAbout = () => {
+    navigate('/about');
+  };
+
   return (
     <>
       <div className={'header-container'}>
@@ -44,9 +48,9 @@ const Navbar: React.FC = () => {
             />
           </div>
           <div className={'row middle-links'}>
-            <p>Ways To pay</p>
-            <p>Shop</p>
-            <p>For Business</p>
+            <Button text={'Ways To pay'} noPadding onClick={goToAbout} />
+            <Button text={'Shop'} noPadding />
+            <Button text={'For Business'} noPadding />
           </div>
           <div className={'row login-buttons'}>
             <Button text={'Merchant login'} />

@@ -7,3 +7,6 @@
   background-color: #121212;
   color: #fff;
 }
+.no-padding {
+  padding: 0;
+}
