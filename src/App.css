@@ -8,12 +8,20 @@
   justify-content: space-between;
 }
 
+.flex-1 {
+  flex: 1;
+}
+
 .justify-end {
   justify-content: flex-end;
 }
 
 .justify-center {
   justify-content: center;
+}
+
+.justify-space-around {
+  justify-content: space-around;
 }
 
 .align-items-center {
@@ -27,7 +35,8 @@
 p,
 h1,
 h2,
-h4 {
+h4,
+h5 {
   font-family: 'Neue Haas Grotesk Display Pro', serif;
   margin: 0;
 }

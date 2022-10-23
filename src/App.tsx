@@ -4,6 +4,7 @@ import { isAppReady } from './store/store.functions';
 import { Spin } from 'antd';
 import RouteHandler from './router/router';
 import NavBar from './components/NavBar/NavBar';
+import Footer from './components/Footer/Footer';
 
 const App = () => {
   const [appReady, setAppReady] = useState(false);
@@ -20,6 +21,7 @@ const App = () => {
     <>
       <NavBar />
       {appReady ? <RouteHandler /> : <Spin size="large" />}
+      <Footer />
     </>
   );
 };
