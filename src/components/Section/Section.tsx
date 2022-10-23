@@ -3,6 +3,7 @@ import { view } from '@risingstack/react-easy-state';
 import './section.css';
 import { SectionTypes } from './section.types';
 import Pagination from '../Pagination/Pagination';
+import Reviews from '../Reviews/Reviews';
 
 const Section: React.FC<SectionTypes> = ({
   title,
@@ -10,6 +11,8 @@ const Section: React.FC<SectionTypes> = ({
   imageUris,
   pagination = false,
   headerTitle,
+  paginationAlignment = 'end',
+  reviews,
 }) => {
   return (
     <div className={'section-container'}>
@@ -44,9 +47,12 @@ const Section: React.FC<SectionTypes> = ({
           ))}
         </div>
       )}
+
+      {!!reviews?.length && <Reviews reviews={reviews} />}
+
       {pagination && (
         <div className={'section-pagination'}>
-          <Pagination />
+          <Pagination alignment={paginationAlignment} />
         </div>
       )}
     </div>

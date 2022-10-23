@@ -1,0 +1,32 @@
+.review-container {
+  margin: 70px 0 100px 0;
+  gap: 20px;
+}
+
+.review-item {
+  background-color: #f9f9f9;
+  padding: 28px 35px 50px 35px;
+  border-radius: 20px;
+
+  box-shadow: -1px 1px 5px 0 rgba(214, 214, 214, 0.75);
+  -webkit-box-shadow: -1px 1px 5px 0 rgba(214, 214, 214, 0.75);
+  -moz-box-shadow: -1px 1px 5px 0 rgba(214, 214, 214, 0.75);
+}
+
+.review-item-header {
+  gap: 12px;
+  align-items: center;
+}
+
+.review-item img {
+  width: 60px;
+  height: 60px;
+}
+
+.review-role {
+  color: #686868;
+}
+
+.review-comment {
+  margin-top: 30px;
+}

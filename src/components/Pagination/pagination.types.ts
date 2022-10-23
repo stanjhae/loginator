@@ -1,3 +1,5 @@
+export type PaginationAlignment = 'center' | 'end';
+
 export type PaginationType = {
-  alignment?: 'center' | 'end';
+  alignment?: PaginationAlignment;
 };

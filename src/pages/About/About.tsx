@@ -2,6 +2,7 @@ import React from 'react';
 import { view } from '@risingstack/react-easy-state';
 import './about.css';
 import Section from '../../components/Section/Section';
+import { REVIEWS } from '../../components/Reviews/review.constants';
 
 const About: React.FC = () => {
   return (
@@ -52,6 +53,9 @@ const About: React.FC = () => {
       />
 
       <Section
+        reviews={REVIEWS}
+        pagination
+        paginationAlignment={'center'}
         headerTitle={
           'We care about our product and always want to improve it. Take a look at reviews on it.'
         }
