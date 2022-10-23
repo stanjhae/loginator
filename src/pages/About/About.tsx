@@ -8,7 +8,7 @@ const About: React.FC = () => {
     <div className={'about-container'}>
       <Section
         title={'What is Cashew?'}
-        imageUri={'/images/about/banner.png'}
+        imageUris={['/images/banner.png']}
         description={
           <>
             <p>Cashew is an easy way to pay for the things you love.</p>
@@ -43,10 +43,19 @@ const About: React.FC = () => {
         }
       />
 
-      <p className={'standalone-text'}>
-        We work with many popular merchants, you have a lot of choice for your
-        purchases and we are working hard to add new merchants every day.
-      </p>
+      <Section
+        pagination
+        headerTitle={
+          'We work with many popular merchants, you have a lot of choice for your purchases and we are working hard to add new merchants every day.'
+        }
+        imageUris={['/images/sandal.png', '/images/runner.png']}
+      />
+
+      <Section
+        headerTitle={
+          'We care about our product and always want to improve it. Take a look at reviews on it.'
+        }
+      />
     </div>
   );
 };

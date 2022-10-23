@@ -3,5 +3,7 @@ import { ReactElement } from 'react';
 export type SectionTypes = {
   title?: string;
   description?: ReactElement;
-  imageUri?: string;
+  imageUris?: string[];
+  pagination?: boolean;
+  headerTitle?: string;
 };

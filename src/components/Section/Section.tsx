@@ -2,8 +2,15 @@ import React from 'react';
 import { view } from '@risingstack/react-easy-state';
 import './section.css';
 import { SectionTypes } from './section.types';
+import Pagination from '../Pagination/Pagination';
 
-const Section: React.FC<SectionTypes> = ({ title, description, imageUri }) => {
+const Section: React.FC<SectionTypes> = ({
+  title,
+  description,
+  imageUris,
+  pagination = false,
+  headerTitle,
+}) => {
   return (
     <div className={'section-container'}>
       <div
@@ -11,17 +18,36 @@ const Section: React.FC<SectionTypes> = ({ title, description, imageUri }) => {
           'row justify-space-between align-items-center section-text-container'
         }
       >
+        {!!headerTitle && (
+          <div className={'section-header-container'}>
+            <h4>{headerTitle}</h4>
+          </div>
+        )}
+
         {!!title && <h2 className={'section-title'}>{title}</h2>}
         {!!description && (
           <div className={'section-description'}>{description}</div>
         )}
       </div>
-      {!!imageUri && (
-        <img
-          className={'section-banner'}
-          src={imageUri}
-          alt={'Accepting cashew payment'}
-        />
+      {!!imageUris?.length && (
+        <div className={'section-banner-container'}>
+          {imageUris?.map((uri) => (
+            <div key={uri}>
+              <div>
+                <img
+                  className={'section-banner'}
+                  src={uri}
+                  alt={'Accepting cashew payment'}
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+      {pagination && (
+        <div className={'section-pagination'}>
+          <Pagination />
+        </div>
       )}
     </div>
   );
