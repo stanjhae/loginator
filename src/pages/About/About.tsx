@@ -2,7 +2,7 @@ import React from 'react';
 import { view } from '@risingstack/react-easy-state';
 
 const About: React.FC = () => {
-  return <h1>About</h1>;
+  return <div />;
 };
 
 export default view(About);

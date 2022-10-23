@@ -1,0 +1,44 @@
+.header-container {
+  background: rgb(255, 212, 185);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 212, 185, 1) 0%,
+    rgba(224, 208, 244, 1) 50%,
+    rgba(203, 165, 252, 1) 100%
+  );
+}
+
+.navbar-container {
+  padding: 10px 50px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 25px;
+}
+
+.title-container {
+  gap: 10px;
+  cursor: pointer;
+}
+
+.middle-links {
+  align-items: center;
+  gap: 22px;
+}
+
+.login-buttons {
+  display: flex;
+  gap: 38px;
+}
+
+.header-title-gradient {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0, #ffffff 100%);
+  padding: 0 50px;
+}
+
+.header-title {
+  font-size: 136px;
+  font-weight: 400;
+}

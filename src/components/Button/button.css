@@ -1,0 +1,9 @@
+.button {
+  border-radius: 12px;
+  padding: 11px 16px;
+  cursor: pointer;
+}
+.primary {
+  background-color: #121212;
+  color: #fff;
+}

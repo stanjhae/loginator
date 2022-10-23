@@ -36,10 +36,17 @@ const login = async (values: User) => {
 
     return { success: true };
   } catch (error) {
-
     console.log('loginError', error);
     return { success: false };
   }
 };
 
-export { login, isAppReady };
+const logout = () => {
+  localStorage.removeItem('token');
+  localStorage.removeItem('email');
+  AuthState.token = '';
+  AuthState.email = '';
+  AuthState.isLoggedIn = false;
+};
+
+export { login, isAppReady, logout };
