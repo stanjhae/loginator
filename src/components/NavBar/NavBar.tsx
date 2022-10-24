@@ -7,6 +7,15 @@ import Button from '../Button/Button';
 import AppStore from '../../store/store';
 import { logout } from '../../store/store.functions';
 import classNames from 'classnames';
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import Zoom from 'react-reveal/Zoom';
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import Bounce from 'react-reveal/Bounce';
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import Flip from 'react-reveal/Flip';
 
 const Navbar: React.FC = () => {
   const { isLoggedIn, isNavMenuOpen } = AppStore;
@@ -60,40 +69,49 @@ const Navbar: React.FC = () => {
   });
 
   return (
-    <>
+    <Flip>
       <div className={'header-container'}>
-        <div className={'row navbar-container'}>
-          <div className={'row title-container'} onClick={goHome}>
-            <img
-              className={'logo'}
-              src={'/images/logo/logo.png'}
-              alt={'cashew logo'}
-            />
-          </div>
-          <div className={'menu'} onClick={toggleNav}>
-            <img src={'/images/menu.png'} alt={'cashew logo'} />
-          </div>
-          <div className={navLinksContainer}>
-            <div className={'row'}>
-              <Button text={'Ways To pay'} noPadding onClick={goToAbout} />
-              <Button text={'Shop'} noPadding />
-              <Button text={'For Business'} noPadding onClick={goToDashboard} />
+        <Zoom top duration={2000} cascade>
+          <div className={'row navbar-container'}>
+            <div className={'row title-container'} onClick={goHome}>
+              <img
+                className={'logo'}
+                src={'/images/logo/logo.png'}
+                alt={'cashew logo'}
+              />
             </div>
-            <div className={'row auth-buttons'}>
-              <Button text={'Merchant login'} />
-              <Button primary text={loginText} onClick={handleLogin} />
+            <div className={'menu'} onClick={toggleNav}>
+              <img src={'/images/menu.png'} alt={'cashew logo'} />
+            </div>
+            <div className={navLinksContainer}>
+              <div className={'row'}>
+                <Button text={'Ways To pay'} noPadding onClick={goToAbout} />
+                <Button text={'Shop'} noPadding />
+                <Button
+                  text={'For Business'}
+                  noPadding
+                  onClick={goToDashboard}
+                />
+              </div>
+              <div className={'row auth-buttons'}>
+                <Button text={'Merchant login'} />
+                <Button primary text={loginText} onClick={handleLogin} />
+              </div>
             </div>
           </div>
-        </div>
-        {!!ROUTER_CONSTANTS[pathname]?.title && (
-          <div className={'header-title-gradient'}>
-            <h1 className={'header-title'}>
-              {ROUTER_CONSTANTS[pathname].title}
-            </h1>
-          </div>
-        )}
+        </Zoom>
+        <Bounce delay={2000} left>
+          {!!ROUTER_CONSTANTS[pathname]?.title && (
+            <div className={'header-title-gradient'}>
+              <h1 className={'header-title'}>
+                {ROUTER_CONSTANTS[pathname].title}
+              </h1>
+            </div>
+          )}
+
+        </Bounce>
       </div>
-    </>
+    </Flip>
   );
 };
 
