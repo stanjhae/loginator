@@ -3,40 +3,20 @@
   flex-direction: column;
 }
 
-.section-text-container {
-  gap: 50px;
-}
-
 .section-header-container {
   display: flex;
   flex: 1;
-  padding: 70px 0;
-  margin: 70px 0 0 0;
+  margin: 5rem 25rem;
   justify-content: center;
-  background-color: #f9f9f9;
-
-  box-shadow: -1px 1px 5px 0 rgba(214, 214, 214, 0.75);
-  -webkit-box-shadow: -1px 1px 5px 0 rgba(214, 214, 214, 0.75);
-  -moz-box-shadow: -1px 1px 5px 0 rgba(214, 214, 214, 0.75);
-
-}
-
-.section-header-container h4 {
-  font-size: 34px;
-  font-weight: 400;
-  width: 600px;
-  line-height: 120%;
-}
-
-.section-title {
-  font-size: 90px;
-  font-weight: 400;
-  font-style: normal;
-  line-height: 90px;
 }
 
 .section-description {
-  width: 700px;
+  width: 40%;
+  padding: 0 2rem;
+}
+
+.section-description p {
+  margin-bottom: 1rem;
 }
 
 .section-banner-container {
@@ -45,8 +25,8 @@
   justify-content: space-around;
   width: 100%;
   align-items: center;
-  margin: 80px 0;
-  gap: 100px;
+  margin: 3rem 0;
+  gap: 1rem;
 }
 
 .section-banner-container div {
@@ -64,6 +44,32 @@
   border-radius: 16px;
 }
 
-.section-pagination {
-  margin-top: -50px;
+.section-text-container {
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 1024px) {
+  .section-header-container {
+    margin: 5rem 8rem;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .section-description {
+    width: auto;
+    padding: 0 2rem;
+  }
+  .section-text-container {
+    justify-content: center;
+  }
+
+  .section-header-container {
+    margin: 5rem 1rem;
+  }
+
+  .section-banner-container {
+    margin: 1rem 0;
+    flex-direction: column;
+    gap: 2rem;
+  }
 }

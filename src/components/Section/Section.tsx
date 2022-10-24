@@ -27,7 +27,11 @@ const Section: React.FC<SectionTypes> = ({
           </div>
         )}
 
-        {!!title && <h2 className={'section-title'}>{title}</h2>}
+        {!!title && (
+          <div>
+            <h2>{title}</h2>
+          </div>
+        )}
         {!!description && (
           <div className={'section-description'}>{description}</div>
         )}
