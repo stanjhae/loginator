@@ -13,11 +13,14 @@ const Footer: React.FC = () => {
               alt={'cashew logo'}
             />
           </h5>
-          <p>+971 4 5616811</p>
-          <p>Maze Tower, Sheikh Zayed Road</p>
-          <p>Dubai, United Arab Emirates</p>
+          <div>
+            <p>+971 4 5616811</p>
+            <p>Maze Tower, Sheikh Zayed Road, Dubai, United Arab Emirates</p>
+          </div>
         </div>
-        <div className={'row justify-space-around flex-1'}>
+        <div
+          className={'row footer-links-container'}
+        >
           <div>
             <h5>Company</h5>
             <p>T&C’s</p>
