@@ -15,6 +15,7 @@ const ROUTER_CONSTANTS: Router = {
   },
   '/login': {
     route: '/login',
+    title: 'Customer Login',
   },
 };
 

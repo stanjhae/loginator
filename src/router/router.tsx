@@ -9,27 +9,33 @@ import { ROUTER_CONSTANTS } from './router.constants';
 
 const RouteHandler = () => {
   return (
-    <Routes>
-      <Route
-        path={ROUTER_CONSTANTS['/'].route}
-        errorElement={<ErrorPage />}
-      />
-      <Route
-        path={ROUTER_CONSTANTS['/about'].route}
-        element={<About />}
-        errorElement={<ErrorPage />}
-      />
-      <Route path={ROUTER_CONSTANTS['/login'].route} element={<Login />} errorElement={<ErrorPage />} />
-      <Route
-        path={ROUTER_CONSTANTS['/dashboard'].route}
-        element={
-          <ProtectedRoute>
-            <Dashboard />
-          </ProtectedRoute>
-        }
-        errorElement={<ErrorPage />}
-      />
-    </Routes>
+    <div className={'router-container'}>
+      <Routes>
+        <Route
+          path={ROUTER_CONSTANTS['/'].route}
+          errorElement={<ErrorPage />}
+        />
+        <Route
+          path={ROUTER_CONSTANTS['/about'].route}
+          element={<About />}
+          errorElement={<ErrorPage />}
+        />
+        <Route
+          path={ROUTER_CONSTANTS['/login'].route}
+          element={<Login />}
+          errorElement={<ErrorPage />}
+        />
+        <Route
+          path={ROUTER_CONSTANTS['/dashboard'].route}
+          element={
+            <ProtectedRoute>
+              <Dashboard />
+            </ProtectedRoute>
+          }
+          errorElement={<ErrorPage />}
+        />
+      </Routes>
+    </div>
   );
 };
 

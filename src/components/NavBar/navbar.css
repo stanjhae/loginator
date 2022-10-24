@@ -79,8 +79,9 @@
     margin: 1rem 1rem;
     padding: 1rem 1.5rem;
     border-radius: 1rem;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.85);
     color: #fff;
+    z-index: 10;
   }
 
   .mobile-nav-links-container > div {

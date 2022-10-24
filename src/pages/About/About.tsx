@@ -56,7 +56,6 @@ const About: React.FC = () => {
         />
 
         <Section
-          reviews={REVIEWS}
           headerTitle={
             'We care about our product and always want to improve it. Take a look at reviews on it.'
           }

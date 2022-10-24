@@ -20,7 +20,12 @@ const Navbar: React.FC = () => {
     [isLoggedIn]
   );
 
+  const closeNav = () => {
+    AppStore.isNavMenuOpen = false;
+  };
+
   const handleLogin = () => {
+    closeNav();
     if (isLoggedIn) {
       logout();
       navigate('/');
@@ -30,15 +35,22 @@ const Navbar: React.FC = () => {
   };
 
   const goHome = () => {
+    closeNav();
     navigate('/');
   };
 
   const goToAbout = () => {
+    closeNav();
     navigate('/about');
   };
 
-  const toggleNav = ({ open = true }: { open: boolean }) => {
-    AppStore.isNavMenuOpen = open;
+  const goToDashboard = () => {
+    closeNav();
+    navigate('/dashboard');
+  };
+
+  const toggleNav = () => {
+    AppStore.isNavMenuOpen = !isNavMenuOpen;
   };
 
   const navLinksContainer = classNames({
@@ -58,18 +70,14 @@ const Navbar: React.FC = () => {
               alt={'cashew logo'}
             />
           </div>
-          <div
-            className={'menu'}
-            onMouseOver={() => toggleNav({ open: true })}
-            onMouseOut={() => toggleNav({ open: false })}
-          >
+          <div className={'menu'} onClick={toggleNav}>
             <img src={'/images/menu.png'} alt={'cashew logo'} />
           </div>
           <div className={navLinksContainer}>
             <div className={'row'}>
               <Button text={'Ways To pay'} noPadding onClick={goToAbout} />
               <Button text={'Shop'} noPadding />
-              <Button text={'For Business'} noPadding />
+              <Button text={'For Business'} noPadding onClick={goToDashboard} />
             </div>
             <div className={'row auth-buttons'}>
               <Button text={'Merchant login'} />

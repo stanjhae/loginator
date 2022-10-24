@@ -18,11 +18,11 @@ const App = () => {
   }
 
   return (
-    <>
+    <div className={'app-container'}>
       <NavBar />
       {appReady ? <RouteHandler /> : <Spin size="large" />}
       <Footer />
-    </>
+    </div>
   );
 };
 

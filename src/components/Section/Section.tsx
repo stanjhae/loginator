@@ -16,7 +16,7 @@ const Section: React.FC<SectionTypes> = ({
     <div className={'section-container'}>
       <div
         className={
-          'row justify-space-between align-items-center section-text-container'
+          'row justify-space-between section-text-container'
         }
       >
         {!!headerTitle && (
