@@ -1,10 +1,10 @@
 import React, { FC, ReactElement } from 'react';
 import { view } from '@risingstack/react-easy-state';
 import { Navigate } from 'react-router-dom';
-import AuthState from '../../store/store';
+import AppStore from '../../store/store';
 
 const ProtectedRoute: FC<{ children: ReactElement }> = ({ children }) => {
-  const { isLoggedIn } = AuthState;
+  const { isLoggedIn } = AppStore;
 
   if (!isLoggedIn) {
     return <Navigate to={'/login'} replace />;

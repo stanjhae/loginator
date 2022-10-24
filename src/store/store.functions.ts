@@ -1,14 +1,14 @@
 import { message } from 'antd';
 import { User } from './store.types';
-import AuthState from './store';
+import AppStore from './store';
 
 const isAppReady = () => {
   const token = localStorage.getItem('token') || '';
   const email = localStorage.getItem('email') || '';
 
-  AuthState.token = token;
-  AuthState.email = email;
-  AuthState.isLoggedIn = !!token;
+  AppStore.token = token;
+  AppStore.email = email;
+  AppStore.isLoggedIn = !!token;
 
   return true;
 };
@@ -28,8 +28,8 @@ const login = async (values: User) => {
       return { success: false };
     }
 
-    AuthState.token = data.token;
-    AuthState.email = values.email;
+    AppStore.token = data.token;
+    AppStore.email = values.email;
 
     localStorage.setItem('token', data.token);
     localStorage.setItem('email', values.email);
@@ -44,9 +44,9 @@ const login = async (values: User) => {
 const logout = () => {
   localStorage.removeItem('token');
   localStorage.removeItem('email');
-  AuthState.token = '';
-  AuthState.email = '';
-  AuthState.isLoggedIn = false;
+  AppStore.token = '';
+  AppStore.email = '';
+  AppStore.isLoggedIn = false;
 };
 
 export { login, isAppReady, logout };

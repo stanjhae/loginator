@@ -9,37 +9,93 @@
 }
 
 .navbar-container {
-  padding: 10px 50px;
+  padding: 1rem 2rem;
+  margin-bottom: 1rem;
   justify-content: space-between;
   align-items: center;
 }
 
 .logo {
-  height: 25px;
+  height: 1.5rem;
 }
 
-.title-container {
-  gap: 10px;
+.menu img {
+  width: 1.5rem;
+  height: 1rem;
+  display: none;
   cursor: pointer;
 }
 
-.middle-links {
-  align-items: center;
-  gap: 22px;
+.title-container {
+  cursor: pointer;
 }
 
-.login-buttons {
-  display: flex;
-  gap: 38px;
+.nav-links-container {
+  align-items: center;
+  justify-content: space-between;
+  flex-basis: 60%;
+}
+
+.nav-links-container > div {
+  gap: 1rem;
 }
 
 .header-title-gradient {
-  height: 246px;
+  height: 15.375rem;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, #ffffff 100%);
-  padding: 0 50px;
+  padding: 0 2rem;
 }
 
 .header-title {
-  font-size: 136px;
+  font-size: 8.5rem;
   font-weight: 400;
+}
+
+@media only screen and (max-width: 1024px) {
+  .header-title {
+    font-size: 4.813rem;
+  }
+
+  .header-title-gradient {
+    height: 9.375rem;
+  }
+
+  .nav-links-container {
+    flex-basis: 75%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .nav-links-container {
+    display: none;
+  }
+
+  .mobile-nav-links-container {
+    position: absolute;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    top: 2rem;
+    margin: 1rem 1rem;
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+  }
+
+  .mobile-nav-links-container > div {
+    flex-direction: column;
+  }
+
+  .mobile-nav-links-container .auth-buttons {
+    gap: 0;
+  }
+
+  .header-title {
+    font-size: 3.25rem;
+  }
+
+  .menu img {
+    display: block;
+  }
 }

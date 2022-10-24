@@ -4,18 +4,19 @@ import './navbar.css';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { ROUTER_CONSTANTS } from '../../router/router.constants';
 import Button from '../Button/Button';
-import AuthState from '../../store/store';
+import AppStore from '../../store/store';
 import { logout } from '../../store/store.functions';
+import classNames from 'classnames';
 
 const Navbar: React.FC = () => {
-  const { isLoggedIn } = AuthState;
+  const { isLoggedIn, isNavMenuOpen } = AppStore;
 
   const { pathname } = useLocation();
 
   const navigate = useNavigate();
 
   const loginText = useMemo(
-    () => (isLoggedIn ? 'Logout' : 'Customer Login'),
+    () => (isLoggedIn ? 'Logout' : 'Customer login'),
     [isLoggedIn]
   );
 
@@ -36,6 +37,16 @@ const Navbar: React.FC = () => {
     navigate('/about');
   };
 
+  const toggleNav = ({ open = true }: { open: boolean }) => {
+    AppStore.isNavMenuOpen = open;
+  };
+
+  const navLinksContainer = classNames({
+    row: true,
+    'nav-links-container': true,
+    'mobile-nav-links-container': isNavMenuOpen,
+  });
+
   return (
     <>
       <div className={'header-container'}>
@@ -47,14 +58,23 @@ const Navbar: React.FC = () => {
               alt={'cashew logo'}
             />
           </div>
-          <div className={'row middle-links'}>
-            <Button text={'Ways To pay'} noPadding onClick={goToAbout} />
-            <Button text={'Shop'} noPadding />
-            <Button text={'For Business'} noPadding />
+          <div
+            className={'menu'}
+            onMouseOver={() => toggleNav({ open: true })}
+            onMouseOut={() => toggleNav({ open: false })}
+          >
+            <img src={'/images/menu.png'} alt={'cashew logo'} />
           </div>
-          <div className={'row login-buttons'}>
-            <Button text={'Merchant login'} />
-            <Button primary text={loginText} onClick={handleLogin} />
+          <div className={navLinksContainer}>
+            <div className={'row'}>
+              <Button text={'Ways To pay'} noPadding onClick={goToAbout} />
+              <Button text={'Shop'} noPadding />
+              <Button text={'For Business'} noPadding />
+            </div>
+            <div className={'row auth-buttons'}>
+              <Button text={'Merchant login'} />
+              <Button primary text={loginText} onClick={handleLogin} />
+            </div>
           </div>
         </div>
         {!!ROUTER_CONSTANTS[pathname]?.title && (

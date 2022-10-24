@@ -1,9 +1,10 @@
 import { store } from '@risingstack/react-easy-state';
-import { AuthStateType } from './store.types';
+import { AppStoreType } from './store.types';
 
-const AuthState: AuthStateType = store({
+const AppStore: AppStoreType = store({
   token: '',
   isLoggedIn: false,
+  isNavMenuOpen: false,
 });
 
-export default AuthState;
+export default AppStore;

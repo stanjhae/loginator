@@ -1,9 +1,9 @@
 import React from 'react';
 import { view } from '@risingstack/react-easy-state';
-import AuthState from '../../store/store';
+import AppStore from '../../store/store';
 
 const Dashboard: React.FC = () => {
-  const { email } = AuthState;
+  const { email } = AppStore;
 
   return <h1>Hello {email}</h1>;
 };

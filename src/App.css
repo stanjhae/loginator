@@ -2,6 +2,7 @@
 
 .row {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .justify-space-between {
@@ -45,4 +46,11 @@ p {
   font-weight: 500;
   font-size: 18px;
   line-height: 23px;
+}
+
+@media only screen and (max-width: 1024px) {
+  p {
+    font-size: 14px;
+
+  }
 }
