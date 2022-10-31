@@ -21,7 +21,7 @@ const About: React.FC = () => {
           }
         />
 
-        <ImageSection imageUris={['/images/banner.png']} />
+        <ImageSection images={[{ uri: '/images/banner.png' }]} />
 
         <Section
           title={'Our goals'}
@@ -55,7 +55,14 @@ const About: React.FC = () => {
 
         <ImageSection
           pagination
-          imageUris={['/images/sandal.png', '/images/runner.png']}
+          images={[
+            {
+              uri: '/images/sandal.png',
+              title: 'Nike Sportswear',
+              category: 'Clothes',
+            },
+            { uri: '/images/runner.png' },
+          ]}
         />
 
         <Section

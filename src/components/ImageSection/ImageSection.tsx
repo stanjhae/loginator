@@ -8,24 +8,34 @@ import Slide from 'react-reveal/Slide';
 import { ImageSectionTypes } from './imageSection.types';
 
 const ImageSection: React.FC<ImageSectionTypes> = ({
-  imageUris,
+  images,
   pagination = false,
   paginationAlignment = 'end',
 }) => {
   return (
     <div>
       <Slide delay={100} duration={2000} bottom>
-        {!!imageUris?.length && (
-          <div className={'section-banner-container'}>
-            {imageUris?.map((uri) => (
-              <div key={uri}>
+        {!!images?.length && (
+          <div className={'image-section-container'}>
+            {images?.map((image) => (
+              <div className={'image-section-inner-container'} key={image.uri}>
                 <div>
                   <img
-                    className={'section-banner'}
-                    src={uri}
+                    className={'image'}
+                    src={image.uri}
                     alt={'Accepting cashew payment'}
                   />
                 </div>
+                {!!image.title && (
+                  <div className={'row product-details'}>
+                    <div>
+                      <p>{image.title}</p>
+                    </div>
+                    <div className={'product-category'}>
+                      <p>{image.category}</p>
+                    </div>
+                  </div>
+                )}
               </div>
             ))}
           </div>
