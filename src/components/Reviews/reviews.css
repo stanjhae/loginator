@@ -1,19 +1,16 @@
 .review-container {
-  padding-bottom: 3rem;
-  gap: 1.2rem;
+  padding-bottom: 2.688rem;
+  margin-top: 0.5rem;
+  gap: 1.25rem;
   justify-content: center;
   flex-wrap: nowrap;
 }
 
 .review-item {
   background-color: #f9f9f9;
-  padding: 1.9rem 1.5rem;
+  padding: 1.75rem 2.25rem 3.188rem 2.625rem;
   border-radius: 20px;
   min-width: 20rem;
-
-  box-shadow: -1px 1px 5px 0 rgba(214, 214, 214, 0.75);
-  -webkit-box-shadow: -1px 1px 5px 0 rgba(214, 214, 214, 0.75);
-  -moz-box-shadow: -1px 1px 5px 0 rgba(214, 214, 214, 0.75);
 }
 
 .review-item-header {
@@ -31,7 +28,7 @@
 }
 
 .review-item:first-child {
-  margin-left: 1.5rem;
+  margin-left: 3.125rem;
 }
 
 .review-role {
@@ -39,7 +36,12 @@
 }
 
 .review-comment {
-  margin-top: 1.3rem;
+  margin-top: 2rem;
+}
+
+.review-comment p {
+  font-size: 16px;
+  color: #686868;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -54,7 +56,6 @@
   .review-item:first-child {
     margin-left: 18rem;
   }
-
 }
 
 @media only screen and (max-width: 768px) {

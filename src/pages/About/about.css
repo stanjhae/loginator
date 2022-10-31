@@ -1,5 +1,5 @@
 .about-container {
   display: flex;
   flex-direction: column;
-  padding: 2rem 3rem;
+  padding: 0 3.125rem;
 }

@@ -10,13 +10,13 @@ const Footer: React.FC = () => {
       <div className={'row justify-space-between footer-main-body'}>
         <Fade delay={1000} duration={2000} cascade bottom>
           <div className={'footer-logo-container'}>
-            <h5>
+            <h6>
               <img
                 className={'logo'}
                 src={'/images/logo/logo.png'}
                 alt={'cashew logo'}
               />
-            </h5>
+            </h6>
             <div>
               <p>+971 4 5616811</p>
               <p>Maze Tower, Sheikh Zayed Road, Dubai, United Arab Emirates</p>
@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
         <div className={'row footer-links-container'}>
           <Fade delay={1000} duration={2000} cascade bottom>
             <div>
-              <h5>Company</h5>
+              <h6>Company</h6>
               <p>T&C’s</p>
               <p>Privacy Policy</p>
               <p>Careers</p>
@@ -35,7 +35,7 @@ const Footer: React.FC = () => {
 
           <Fade delay={1000} duration={2000} cascade bottom>
             <div>
-              <h5>Shoppers</h5>
+              <h6>Shoppers</h6>
               <p>Customer login</p>
               <p>Shop directory</p>
               <p>FAQ</p>
@@ -44,7 +44,7 @@ const Footer: React.FC = () => {
 
           <Fade delay={1000} duration={2000} cascade bottom>
             <div>
-              <h5>Merchants</h5>
+              <h6>Merchants</h6>
               <p>Merchant login</p>
               <p>For business</p>
               <p>Ways to pay</p>
@@ -54,7 +54,7 @@ const Footer: React.FC = () => {
 
           <Fade delay={1000} duration={2000} cascade bottom>
             <div>
-              <h5>Subscribe</h5>
+              <h6>Subscribe</h6>
               <div className={'footer-input-right-action'} data-action={'Send'}>
                 <input
                   placeholder={'Enter your e-mail'}

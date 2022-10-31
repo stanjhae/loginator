@@ -1,19 +1,21 @@
 p,
 h1,
 h2,
+h3,
 h4,
-h5 {
+h6 {
   font-family: 'Neue Haas Grotesk Display Pro', serif;
   margin: 0;
+  color: #121212;
 }
 
 p {
-  font-weight: 500;
   font-size: 18px;
   line-height: 23px;
 }
 
 h2 {
+  align-self: flex-start;
   font-size: 4.7rem;
   font-weight: 400;
   font-style: normal;
@@ -26,8 +28,9 @@ h4 {
   line-height: 40px;
 }
 
-h5 {
+h6 {
   font-size: 22px;
+  line-height: 26px;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -66,6 +69,9 @@ h5 {
   justify-content: center;
 }
 
-.vertical-padding-10 {
-  padding: 10px 0;
+.vertical-margin-1 {
+  margin: 1rem 0;
+}
+.bottom-margin-4 {
+  margin-bottom: 4rem;
 }

@@ -22,7 +22,9 @@ const Reviews: FC<ReviewType> = ({ reviews }) => {
                   <p className={'review-role'}>{review.role}</p>
                 </div>
               </div>
-              <div className={'review-comment'}>{review.comment}</div>
+              <div className={'review-comment'}>
+                <p>{review.comment}</p>
+              </div>
             </div>
           ))}
         </div>

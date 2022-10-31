@@ -1,5 +1,6 @@
 .pagination-container {
   gap: 1rem;
+  margin: 1.875rem 0 5rem 0;
 }
 
 .pagination-button img {

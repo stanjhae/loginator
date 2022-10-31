@@ -1,21 +1,17 @@
-.footer-container {
-  margin-top: 2rem;
-}
-
 .footer-container p {
   font-size: 14px;
   cursor: pointer;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
   line-height: 1.2rem;
 }
 
-.footer-container h5 {
-  margin-bottom: 1rem;
+.footer-container h6 {
+  margin-bottom: 1.813rem;
 }
 
 .footer-main-body {
-  padding: 2rem;
-  margin-bottom: 2rem;
+  padding: 2.813rem 0 2.813rem 3.125rem;
+  margin-bottom: 1.8rem;
 }
 
 .footer-logo-container {
@@ -42,11 +38,11 @@
   cursor: pointer;
 }
 .footer-fine-print {
-  padding: 0 2rem;
+  padding: 0 3.125rem;
 }
 
 .footer-decoration {
-  padding: 1rem 1rem 0 1rem;
+  margin: 1.875rem 3.125rem 0 3.125rem;
   overflow: hidden;
 }
 
