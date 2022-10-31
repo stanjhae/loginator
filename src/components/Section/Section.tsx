@@ -16,7 +16,7 @@ const Section: React.FC<SectionTypes> = ({
 }) => {
   return (
     <div className={'section-container'}>
-      <div className={'row justify-space-between section-text-container'}>
+      <div className={'row section-text-container'}>
         {!!headerTitle && (
           <Zoom delay={100} duration={2000} bottom>
             <div className={'section-header-container'}>

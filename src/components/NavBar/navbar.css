@@ -58,6 +58,10 @@
     margin-bottom: 3.625rem;
   }
 
+  .logo {
+    height: 0.951rem;
+  }
+
   .header-title {
     font-size: 4.813rem;
     line-height: 4.813rem;
@@ -74,6 +78,11 @@
 }
 
 @media only screen and (max-width: 700px) {
+  .navbar-container {
+    padding: 1rem 1.25rem 0 1.25rem;
+    margin-bottom: 2.419rem;
+  }
+
   .nav-links-container {
     display: none;
   }
@@ -98,6 +107,15 @@
 
   .mobile-nav-links-container .auth-buttons {
     gap: 0;
+  }
+
+  .mobile-nav-links-container p {
+    color: #fff;
+  }
+
+  .header-title-gradient {
+    height: 5.938rem;
+    padding: 0 1.25rem;
   }
 
   .header-title {

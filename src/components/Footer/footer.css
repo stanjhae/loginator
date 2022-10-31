@@ -19,6 +19,10 @@
   flex-basis: 35%;
 }
 
+.footer-logo-container img {
+  height: 1.875rem;
+}
+
 .footer-logo-container > div {
   max-width: 13rem;
 }
@@ -96,16 +100,39 @@ input {
 @media only screen and (max-width: 700px) {
   .footer-main-body {
     flex-direction: column;
+    gap: 5rem;
+    padding: 1.25rem 1.25rem;
+    margin-top: 5.188rem;
   }
+
+  .footer-logo-container img {
+    margin-bottom: 0.5rem;
+    height: 1.438rem;
+  }
+
+  .footer-container h6 {
+    margin-bottom: 1.25rem;
+  }
+
   .footer-links-container {
     flex-direction: column;
   }
 
+  .footer-links-container > div > p:last-child {
+    margin-bottom: 2.688rem;
+  }
+
+  .footer-subscription {
+    margin-top: 2.313rem;
+  }
+
   .footer-fine-print {
     flex-direction: column;
+    padding: 0 1.2rem;
+    margin: 0 0 3.438rem 0;
   }
 
   .footer-decoration img {
-    width: 50rem;
+    width: 44rem;
   }
 }

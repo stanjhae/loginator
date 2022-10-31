@@ -4,7 +4,16 @@
 }
 
 @media only screen and (max-width: 1024px) {
-  .tablet-spacer {
+  .spacer {
     height: 2.813rem;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .spacer {
+    height: 1.563rem;
+  }
+  .spacer-2 {
+    height: 0.875rem;
   }
 }

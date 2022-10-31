@@ -43,12 +43,15 @@ const About: React.FC = () => {
           }
         />
 
-        <div className={'tablet-spacer'} />
+        <div className={'spacer'} />
+
         <Section
           headerTitle={
             'We work with many popular merchants, you have a lot of choice for your purchases and we are working hard to add new merchants every day.'
           }
         />
+
+        <div className={'spacer-2'} />
 
         <ImageSection
           pagination

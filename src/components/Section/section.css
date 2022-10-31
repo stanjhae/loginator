@@ -37,15 +37,17 @@
 }
 
 @media only screen and (max-width: 700px) {
+  .section-text-container {
+    margin: 3.438rem 0 0.625rem 0;
+  }
+
   .section-description {
     width: auto;
-    padding: 0 2rem;
-  }
-  .section-text-container {
-    justify-content: center;
+    padding: 0;
+    margin-top: 0.75rem;
   }
 
   .section-header-container {
-    margin: 5rem 1rem;
+    width: 100%;
   }
 }
