@@ -1,8 +1,8 @@
-.review-container {
+.inner-review-container {
   padding-bottom: 2.688rem;
   margin-top: 0.5rem;
   gap: 1.25rem;
-  justify-content: center;
+  overflow-x: auto;
   flex-wrap: nowrap;
 }
 
@@ -23,14 +23,6 @@
   height: 60px;
 }
 
-.review-item:last-child {
-  margin-right: 1.5rem;
-}
-
-.review-item:first-child {
-  margin-left: 3.125rem;
-}
-
 .review-role {
   color: #686868;
 }
@@ -44,31 +36,21 @@
   color: #686868;
 }
 
-@media only screen and (max-width: 1024px) {
-  .review-container {
-    overflow-x: scroll;
-  }
-
-  .review-item {
-    min-width: 25rem;
-  }
-
-  .review-item:first-child {
-    margin-left: 18rem;
-  }
+.review-container .pagination-container {
+  margin: 1.875rem 0 5.188rem 0;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .review-container {
-    overflow-x: scroll;
+    margin-bottom: 3.625rem;
+  }
+
+  .review-container .pagination-container {
+    display: none;
   }
 
   .review-item {
-    min-width: 25rem;
-  }
-
-  .review-item:first-child {
-    margin-left: 35rem;
+    padding: 1.375rem 2.25rem 3.188rem 1.375rem;
   }
 }
 

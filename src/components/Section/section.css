@@ -13,12 +13,6 @@
   width: 35%;
 }
 
-.section-header-container h3 {
-  font-weight: 400;
-  font-size: 34px;
-  line-height: 41px;
-}
-
 .section-description {
   width: 40%;
   padding: 0 2rem;
@@ -29,8 +23,16 @@
 }
 
 @media only screen and (max-width: 1024px) {
+  .section-text-container {
+    margin: 3.438rem 0 2.5rem 0;
+  }
+
   .section-header-container {
-    margin: 5rem 8rem;
+    width: 65%;
+  }
+
+  .section-description {
+    width: 44%;
   }
 }
 

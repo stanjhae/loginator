@@ -42,8 +42,8 @@
 
 .header-title-gradient {
   height: 15.375rem;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 10%, #ffffff 100%);
-  padding: 0 3.125rem;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 40%, #ffffff 100%);
+  padding: 0 1.875rem;
 }
 
 .header-title {
@@ -53,12 +53,19 @@
 }
 
 @media only screen and (max-width: 1024px) {
+  .navbar-container {
+    padding: 1rem 1.875rem 0 1.875rem;
+    margin-bottom: 3.625rem;
+  }
+
   .header-title {
     font-size: 4.813rem;
+    line-height: 4.813rem;
   }
 
   .header-title-gradient {
-    height: 9.375rem;
+    height: 8.5rem;
+    padding: 0 1.875rem;
   }
 
   .nav-links-container {

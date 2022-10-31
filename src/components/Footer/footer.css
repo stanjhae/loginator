@@ -10,12 +10,13 @@
 }
 
 .footer-main-body {
-  padding: 2.813rem 0 2.813rem 3.125rem;
+  padding: 2.813rem 3.125rem;
   margin-bottom: 1.8rem;
+  justify-content: space-between;
 }
 
 .footer-logo-container {
-  flex-basis: 30%;
+  flex-basis: 35%;
 }
 
 .footer-logo-container > div {
@@ -24,12 +25,12 @@
 
 .footer-links-container {
   flex: 1;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .footer-socials {
   gap: 15px;
-  margin-top: 20px;
+  margin-top: 1.5rem;
 }
 
 .footer-socials img {
@@ -39,10 +40,11 @@
 }
 .footer-fine-print {
   padding: 0 3.125rem;
+  justify-content: space-between;
 }
 
 .footer-decoration {
-  margin: 1.875rem 3.125rem 0 3.125rem;
+  margin: 1.875rem 2.75rem 0 2.75rem;
   overflow: hidden;
 }
 
@@ -56,6 +58,7 @@ input {
   border-color: #121212;
   background: transparent;
   width: 20rem;
+  padding-bottom: 0.938rem;
 }
 
 .footer-input-right-action {
@@ -71,6 +74,23 @@ input {
   transform: translateY(-50%);
   color: #000;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 1024px) {
+  .footer-main-body {
+    padding: 2.813rem 1.875rem;
+  }
+  .footer-subscription {
+    margin-top: 5.25rem;
+  }
+  .footer-fine-print {
+    flex-direction: column;
+    padding: 0 1.875rem;
+    margin: -9.75rem 0 8.25rem 0;
+  }
+  .footer-decoration img {
+    width: 59.5rem;
+  }
 }
 
 @media only screen and (max-width: 700px) {

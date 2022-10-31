@@ -25,6 +25,12 @@
   border-radius: 16px;
 }
 
+@media only screen and (max-width: 1024px) {
+  .section-banner-container div:nth-child(2) {
+    border-left: 1rem solid #fff;
+  }
+}
+
 @media only screen and (max-width: 700px) {
   .section-banner-container {
     margin: 1rem 0;

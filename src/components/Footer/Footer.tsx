@@ -7,7 +7,7 @@ import Fade from 'react-reveal/Fade';
 const Footer: React.FC = () => {
   return (
     <div className={'footer-container'}>
-      <div className={'row justify-space-between footer-main-body'}>
+      <div className={'row footer-main-body'}>
         <Fade delay={1000} duration={2000} cascade bottom>
           <div className={'footer-logo-container'}>
             <h6>
@@ -53,7 +53,7 @@ const Footer: React.FC = () => {
           </Fade>
 
           <Fade delay={1000} duration={2000} cascade bottom>
-            <div>
+            <div className={'footer-subscription'}>
               <h6>Subscribe</h6>
               <div className={'footer-input-right-action'} data-action={'Send'}>
                 <input
@@ -70,7 +70,7 @@ const Footer: React.FC = () => {
           </Fade>
         </div>
       </div>
-      <div className={'row justify-space-between footer-fine-print'}>
+      <div className={'row footer-fine-print'}>
         <p>Cashew, 2022, All rights reserved ®</p>
         <p>Design by Embacy</p>
       </div>

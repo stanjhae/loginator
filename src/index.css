@@ -22,6 +22,12 @@ h2 {
   line-height: 90px;
 }
 
+h3 {
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 41px;
+}
+
 h4 {
   font-size: 34px;
   font-weight: 400;
@@ -35,10 +41,15 @@ h6 {
 
 @media only screen and (max-width: 1024px) {
   p {
-    font-size: 14px;
+    font-size: 1rem;
+    line-height: 1.313rem;
   }
   h2 {
-    font-size: 3.2rem;
+    font-size: 3.5rem;
+  }
+  h3 {
+    font-size: 26px;
+    line-height: 31px;
   }
 }
 
@@ -57,10 +68,6 @@ h6 {
   flex-wrap: wrap;
 }
 
-.justify-space-between {
-  justify-content: space-between;
-}
-
 .justify-end {
   justify-content: flex-end;
 }
@@ -71,7 +78,4 @@ h6 {
 
 .vertical-margin-1 {
   margin: 1rem 0;
-}
-.bottom-margin-4 {
-  margin-bottom: 4rem;
 }

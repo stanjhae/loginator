@@ -8,9 +8,9 @@ import Slide from 'react-reveal/Slide';
 
 const Reviews: FC<ReviewType> = ({ reviews }) => {
   return (
-    <>
+    <div className={'review-container'}>
       <Slide right cascade>
-        <div className={'row review-container'}>
+        <div className={'row inner-review-container'}>
           {reviews?.map((review) => (
             <div key={review.avatar} className={'review-item'}>
               <div className={'row review-item-header'}>
@@ -30,7 +30,7 @@ const Reviews: FC<ReviewType> = ({ reviews }) => {
         </div>
       </Slide>
       <Pagination alignment={'center'} />
-    </>
+    </div>
   );
 };
 

@@ -35,7 +35,7 @@ const About: React.FC = () => {
                 payments into installments or simply delay them to up to a
                 fortnight, all without any hidden fees.
               </p>
-              <p className={'bottom-margin-4'}>
+              <p>
                 The company was co-founded by Ammar Afif and Ibtissam Ouassif in
                 2019 and is headquartered in Dubai, United Arab Emirates.
               </p>
@@ -43,6 +43,7 @@ const About: React.FC = () => {
           }
         />
 
+        <div className={'tablet-spacer'} />
         <Section
           headerTitle={
             'We work with many popular merchants, you have a lot of choice for your purchases and we are working hard to add new merchants every day.'
@@ -56,7 +57,7 @@ const About: React.FC = () => {
 
         <Section
           headerTitle={
-            'We care about our product and always want to improve it. Take a look at reviews on it.'
+            'We care about our product and always wanted to improve it. Take a look at reviews on it.'
           }
         />
       </div>
